@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get 'sign_in' => 'users#sign_in'
   get 'leads' => 'leads#new'
   get 'welcome' => 'watson#welcome'
+  get 'interventions' => 'interventions#new'
 
   # namespace :admin do
   #   resources :addresses do

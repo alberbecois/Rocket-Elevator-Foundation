@@ -42,5 +42,7 @@ Rails.application.config.assets.precompile += %w( plugins/smoothscroll.js )
 Rails.application.config.assets.precompile += %w( plugins/mixitup/jquery.mixitup.min.js )
 Rails.application.config.assets.precompile += %w( plugins/bootstrap/css/bootstrap.min.css )
 
+#Josh added this
+Rails.application.config.assets.precompile += %w( interventions.js )
 
 
