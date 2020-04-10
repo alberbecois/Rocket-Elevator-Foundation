@@ -81,9 +81,17 @@
                 <li><!-- CONTACT -->
                   <%= link_to 'CONTACT', index_path(anchor: "contact") %>
                 </li>
+                <li>
+                  <%= link_to 'LOGIN', login_path %>
+                </li>
+                <!-- INTERVENTIONS --> 
+                <% if employee_signed_in?%>
+                <% if current_employee%>
                   <li>
-                    <%= link_to 'LOGIN', login_path %>
+                    <%= link_to 'INTERVENTIONS', interventions_path %>
                   </li>
+                <%end%>
+                <%end%>
               </ul>
             </nav>
           </div>
