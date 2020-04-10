@@ -1,24 +1,30 @@
 class InterventionsController < ApplicationController
+  
+  before_action :authenticate_employee!
 
   def new
     @intervention = Intervention.new
   end
 
   def create
+    @cur_employee = current_employee
     @intervention = Intervention.new(intervention_params)
+    @intervention.author_id = @cur_employee.id
+    
     if @intervention.save
       flash[:notice] = "add new intervention successfull "
       redirect_to :index
     else
       flash[:notice] = "add new intervention not successfull "
-      redirect_to action:"new"
+      raise StandardError, @intervention.errors.messages
+      #redirect_to action:"new"
     end
   end
 
   private
 
     def intervention_params
-      params.require(:intervention).permit(:author_id, :customer_id, :building_id, :battery_id, :column_id, :elevator_id, :employee_id, :report)
+      params.require(:intervention).permit(:customer_id, :building_id, :battery_id, :column_id, :elevator_id, :employee_id, :report)
     end
 
 end

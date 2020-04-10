@@ -1,5 +1,5 @@
 class Intervention < ApplicationRecord
-    belongs_to :employees
-    belongs_to :customers
-    belongs_to :buildings
+    belongs_to :employee
+    belongs_to :customer
+    belongs_to :building
 end
