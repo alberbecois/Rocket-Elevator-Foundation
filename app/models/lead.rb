@@ -1,6 +1,6 @@
 class Lead < ApplicationRecord
     
-    after_save :create_lead_ticket
+    # after_save :create_lead_ticket
 
     def create_lead_ticket
         client = ZendeskAPI::Client.new do |config|

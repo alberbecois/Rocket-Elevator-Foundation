@@ -7,7 +7,7 @@ class Intervention < ApplicationRecord
     belongs_to :column, optional: true
     belongs_to :elevator, optional: true
 
-    after_save :create_intervention_ticket
+    # after_save :create_intervention_ticket
 
     def create_intervention_ticket
         client = ZendeskAPI::Client.new do |config|
