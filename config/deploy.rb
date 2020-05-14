@@ -1,6 +1,8 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.12.0"
 
+set :rvm_custom_path, '/usr/share/rvm'
+
 before 'deploy', 'rvm1:install:ruby'
 set :rvm_map_bins, [ 'rake', 'gem', 'bundle', 'ruby', 'puma', 'pumactl' ]
 set :application, "Joshua_Knutson"

@@ -16,6 +16,7 @@ set :bundle_without, "production"
 set :deploy_to, "/home/ubuntu/apps/#{app}"
 set :linked_dirs, %w{tmp/pids tmp/sockets log}
 set :linked_files, %w{config/database.yml config/application.yml}
+set :rvm_custom_path, '/usr/share/rvm'
 
 # role-based syntax
 # ==================
@@ -25,9 +26,9 @@ set :linked_files, %w{config/database.yml config/application.yml}
 # property set. Specify the username and a domain or IP for the server.
 # Don't use `:all`, it's a meta role.
 
-role :app, %w{ubuntu@99.79.123.96}
-role :web, %w{ubuntu@99.79.123.96}
-role :db,  %w{ubuntu@99.79.123.96}
+role :app, %w{ubuntu@15.223.104.110}
+role :web, %w{ubuntu@15.223.104.110}
+role :db,  %w{ubuntu@15.223.104.110}
 
 
 
