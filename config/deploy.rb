@@ -3,7 +3,7 @@ lock "~> 3.12.0"
 
 set :rvm_custom_path, '/usr/share/rvm'
 
-before 'deploy', 'rvm1:install:ruby'
+#before 'deploy', 'rvm1:install:ruby'
 set :rvm_map_bins, [ 'rake', 'gem', 'bundle', 'ruby', 'puma', 'pumactl' ]
 set :application, "Joshua_Knutson"
 set :repo_url, "https://github.com/alberbecois/Rocket-Elevator-Foundation.git"
