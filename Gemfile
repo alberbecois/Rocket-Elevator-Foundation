@@ -89,6 +89,7 @@ group :development do
   gem 'capistrano3-puma'
   gem 'capistrano-rake', require: false
   gem 'rspec'
+  gem 'capistrano-rvm'
 end
 
 group :test do
